@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>红茶在线鉴定系统</title>
+    <!--
+        作者：fqj
+        时间：2018-05-12
+        描述：css重置，目的是改变浏览器默认样式，注意要写在test下
+    -->
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+<header>
+    <div class="main-wrapper">
+        <nav>
+            <ul>
+                <li class="logo">红茶在线鉴定</li>
+                #if($user)
+                <!--<li><h2>$!{user.name}</h2></li>-->
+                <ul>
+                    <li class="one">
+                        <a href="#" class="user">
+                            <img src="$!{user.headUrl}">
+                            <span class="name">$!{user.name}</span>
+                        </a>
+                        <ul class="get">
+                            <li class="logout"><a href="/logout" class="out">注销</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                #else
+                <li><button class="reg" onclick="window.location.href='/reg'">注册</button></li>
+                <li> <button class="login" onclick="window.location.href='/login'">登录</button></li>
+                #end
+            </ul>
+        </nav>
+        <div id="banner">
+            <div class="inner">
+                <h1>红茶在线鉴定</h1>
+                <p class="sub-handding">
+                    输入红茶图片鉴定发酵程度
+                </p>
+
+                <div class="div1">
+                <div class="div2">上传图片</div>
+                <form method="post" enctype="multipart/form-data" id="file_upload" action="/uploadImg">
+                    <input type="file" id="image-file" name="file" accept="image/*">
+                    <div class="imagediv"><button class="image-submit" type="submit" onclick="form=document.getElementById('file_upload');form.action='/uploadImg'">确定</button></div>
+                </form>
+                </div>
+
+                <div class="more">
+                    更多
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="content">
+    <section class="green-section">
+        <div class="wrapper">
+            <div>
+                <h2>红茶</h2>
+                <div class="hr">
+                </div>
+                <p class="sub-heading">
+                    1r2egfegeyhry4y4grh
+                    sfasfasdasdwe
+                </p>
+            </div>
+            <div class="icon-group">
+                <span class="icon">item1</span>
+                <span class="icon">item2</span>
+                <span class="icon">item3</span>
+            </div>
+        </div>
+    </section>
+    <section class="gray-section">
+        <div class="article-preview">
+            <div class="img-section">
+                <img src="images/pic01.jpg" alt="">
+            </div>
+            <div class="text-section">
+                <h2>又一个标题</h2>
+                <div class="sub-handding">
+                    我是副标题你好
+                </div>
+                <p>
+                    1sdwfedgrdjggdsgkv
+                    gregwergwergwe
+                    fhrhrhrhrhrhrhhrh
+                </p>
+            </div>
+        </div>
+
+        <div class="article-preview">
+            <div class="text-section">
+                <h2>又一个标题</h2>
+                <div class="sub-handding">
+                    我是副标题你好
+                </div>
+                <p>
+                    1sdwfedgrdjggdsgkv
+                    gregwergwergwe
+                    fhrhrhrhrhrhrhhrh
+                </p>
+            </div>
+            <div class="img-section">
+                <img src="images/pic02.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="article-preview">
+            <div class="img-section">
+                <img src="images/pic03.jpg" alt="">
+            </div>
+            <div class="text-section">
+                <h2>又一个标题</h2>
+                <div class="sub-handding">
+                    我是副标题你好
+                </div>
+                <p>
+                    1sdwfedgrdjggdsgkv
+                    gregwergwergwe
+                    fhrhrhrhrhrhrhhrh
+                </p>
+            </div>
+        </div>
+
+    </section>
+    <section class="purple-section">
+        <div class="wrapper">
+            <div class="heading-wrapper">
+                <h2>中国六大茶类</h2>
+                <div class="hr"></div>
+                <div class="sub-heading">
+
+                </div>
+                <div class="card-group">
+                    <div class="card">
+                        <h3>红茶</h3>
+                        <p>
+                            红茶，起源于中国，最早的红茶叫做正山小种，由福建武夷山市星村镇桐木村江氏先祖，于明朝中后期（约1568年），
+                            创制而成。 武夷山市桐木村江氏家族是生产正山小种红茶的茶叶世家，至今已经有400多年的历史。
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>绿茶</h3>
+                        <p>
+                            绿茶(Green Tea)，是中国的主要茶类之一，是指采取茶树的新叶或芽，未经发酵，经杀青、整形、烘干等工艺而制作的饮品。其制成品的色泽和冲泡后的茶汤较多的保存了鲜茶叶的绿色格调。常饮绿茶能防癌，降脂和减肥，对吸烟者也可减轻其受到的尼古丁伤害。
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>黑茶</h3>
+                        <p>
+                            黑茶(dark tea)，因成品茶的外观呈黑色，故得名。黑茶属于六大茶类之一，属后发酵茶，主产区为四川、云南、湖北、湖南、陕西、安徽等地。传统黑茶采用的黑毛茶原料成熟度较高，是压制紧压茶的主要原料。
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>白茶</h3>
+                        <p>
+                            白茶，属微发酵茶，是中国茶农创制的传统名茶。中国六大茶类之一。指一种采摘后，不经杀青或揉捻，只经过晒或文火干燥后加工的茶。具有外形芽毫完整，满身披毫，毫香清鲜，汤色黄绿清澈，滋味清淡回甘的的品质特点。 属轻微发酵茶，是中国茶类中的特殊珍品。
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>黄茶</h3>
+                        <p>
+                            黄茶是中国特产。其按鲜叶老嫩芽叶大小又分为黄芽茶、黄小茶和黄大茶。黄芽茶主要有君山银针、蒙顶黄芽和霍山黄芽、远安黄茶;如沩山毛尖、平阳黄汤、雅安黄茶等均属黄小茶。三峡库区蓄水以后，秭归山区常年雾气笼罩，形成了独具特色的秭归黄茶，也属于黄小茶。
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>乌龙茶</h3>
+                        <p>
+                            乌龙茶，亦称青茶、半发酵茶，是中国几大茶类中，独具鲜明特色的茶叶品类。乌龙茶是经过杀青、萎雕、摇青、半发酵、烘焙等工序后制出的品质优异的茶类。乌龙茶由宋代贡茶龙团、凤饼演变而来，创制于1725年(清雍正年间)前后。品尝后齿颊留香，回味甘鲜。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <ul class="share-group">
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+    </ul>
+    <div class="copy">
+        &copy 方齐军 2018.05
+    </div>
+</footer>
+</div>
+<button class="back-to-top">返回顶部</button>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>
+</html>
